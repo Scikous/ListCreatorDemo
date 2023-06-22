@@ -1,0 +1,27 @@
+ <title>Shopping list</title>
+
+<h1><%= it.list.name %></h1>
+
+<a href="/lists"> Shopping Lists </a>
+
+<form method="POST" action="/lists/<%= it.list.id %>/items">
+    Item Name: <input type="text" name="name" pattern=".*[a-zA-Z].*" required />
+    <input type="submit" value="Add Item"/>
+</form>
+
+<ul>
+<% it.items.forEach((item) => {%>
+    <li>
+    <% if (!item.collected) { %>
+
+    <h3><%= item.name %></h3>
+    <form method="POST" action="/lists/<%= it.list.id %>/items/<%= item.id %>/collect">
+      <input type="submit" name="<%=item.name%>" value="Mark Collected!"/>
+      </form>
+
+      <% } else {%>
+      <h3><del> <%= item.name %></del></h3>
+      <% }%>
+    </li>
+<%}); %>
+</ul>
