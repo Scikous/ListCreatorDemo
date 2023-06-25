@@ -1,8 +1,9 @@
 <% layout('./layouts/layout.eta') %>
 
 <title>Shopping lists</title>
+<h1>Shopping lists</h1>
 
-<a href="/"> Main Page </a>
+<a href="/" class="custom-link"> Main Page </a>
 
 <form method="POST" action="/lists">
   Shopping List Name: <input type="text" name="name" pattern=".*[a-zA-Z].*" required />
@@ -12,7 +13,7 @@
 <ul>
 <% it.lists.forEach((list) => {%>
     <li>
-    <h3><a href="lists/<%= list.id %>"><%= list.name %></a></h3>
+    <h3><a href="lists/<%= list.id %>" class="custom-link"><%= list.name %></a></h3>
     <form method="POST" action="/lists/<%= list.id %>/deactivate">
       <input type="submit" name="<%=list.name%>" value="Deactivate list!"/>
 

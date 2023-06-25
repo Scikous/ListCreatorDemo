@@ -1,8 +1,10 @@
- <title>Shared shopping lists</title>
+<% layout('./layouts/layout.eta') %>
+
+<title>Shared shopping lists</title>
 
 <h1>Shared shopping lists</h1>
 
-<a href="/lists">Lists</a>
+<a href="/lists" class="custom-link">Lists</a>
 
 
  <% if (it.listsCount > 0) { %>
