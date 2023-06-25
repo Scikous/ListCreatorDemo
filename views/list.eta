@@ -1,8 +1,11 @@
- <title>Shopping list</title>
+<% layout('./layouts/layout.eta') %>
+
+<title>Shopping list</title>
 
 <h1><%= it.list.name %></h1>
 
-<a href="/lists"> Shopping Lists </a>
+<a href="/lists" class="custom-link"> Shopping Lists </a>
+
 
 <form method="POST" action="/lists/<%= it.list.id %>/items">
     Item Name: <input type="text" name="name" pattern=".*[a-zA-Z].*" required />

@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
+        <style>
+      .custom-link {
+        font-size: 35px !important;
+        text-decoration: underline !important;
+        color: blue !important;
+        display: inline-block !important;
+        margin-bottom: 20px !important;
+      }
+
+      .custom-link:hover {
+        color: red !important;
+        background-color: lightgray !important;
+      }
+    </style>
   </head>
   <body>
     <div class="container paper">
