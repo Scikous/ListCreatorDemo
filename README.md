@@ -5,7 +5,7 @@ This is a simple web application that can be run locally. In this, one can creat
 
 ## Requirements
 * Docker
-* Postgressql-Client
+* Postgresql-Client
 * Deno
 
 ## How To Use
